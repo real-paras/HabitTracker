@@ -1,0 +1,17 @@
+{
+  "name": "habit-tracker-root",
+  "version": "1.0.0",
+  "description": "GitHub-style habit tracker PWA with Node.js and MongoDB",
+  "private": true,
+  "scripts": {
+    "install:server": "npm install --prefix server",
+    "install:client": "npm install --prefix client",
+    "install:all": "npm run install:server && npm run install:client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently -n \"server,client\" -c \"blue.bold,green.bold\" \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
