@@ -3,9 +3,9 @@
 > The agent's living memory for this project. **Read this first every session. Update it at the end of every task.** Keep it short, factual, and current. Never put secrets or `.env` values here.
 
 ## 1. Current Status
-- **Last completed task:** Task 0.2
-- **Currently working on:** Module 0, Task 0.3
-- **Next task:** 0.3 First push and verify
+- **Last completed task:** Task 1.1
+- **Currently working on:** Module 1, Task 1.2
+- **Next task:** 1.2 MongoDB Atlas cluster + Mongoose connection in `config/db.ts`
 - **Blockers:** none
 - **Last updated:** 2026-10-16
 
@@ -64,12 +64,14 @@ git push
 |------|---------|---------------|----------------|
 | 2026-10-16 | 0.1 | Safety check and wipe; removed old project files while keeping .git | (no commit yet) |
 | 2026-10-16 | 0.2 | Restored docs into docs/, created client and server folders with .env.example, root .gitignore, README.md | `add basic project structure` |
+| 2026-10-16 | 0.3 | First push to GitHub origin/main and verified clean repo | (push) |
+| 2026-10-16 | 1.1 | Express + TypeScript server setup with helmet, cors, morgan, dotenv | `add express server setup` |
 
 ## 9. Problems and Fixes
 Record errors that took effort to solve, so they are never repeated.
 | Date | Problem | Cause | Fix |
 |------|---------|-------|-----|
-| | | | |
+| 2026-10-16 | TS5108: Option 'moduleResolution=node10' has been removed | Legacy 'node' alias deprecated in newest TypeScript | Configured `"module": "NodeNext"` and `"moduleResolution": "NodeNext"` in `tsconfig.json` |
 
 ## 10. Open Questions
 - Language: Resolved (TypeScript chosen for client and server)

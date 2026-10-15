@@ -47,12 +47,12 @@ flowchart TD
 |----|------|-----------|--------|
 | [x] 0.1 | **Safety check and wipe.** Confirm the project folder, list everything to delete, get "yes, delete", remove all files **except `.git`** | Folder contains only `.git`; user confirmed | (no commit yet) |
 | [x] 0.2 | **Restore docs and create basic structure.** Copy the 7 doc files into `docs/`; create `client/`, `server/`, `README.md`, `.gitignore`, `.env.example` files | Structure matches `Architecture.md` Section 3 | `git add .` then `git commit -m "add basic project structure"` (one single commit; the deletions are included) |
-| [ ] 0.3 | **First push and verify.** Explain `git push`; after user approval, push; check GitHub shows the new structure | GitHub repo shows only the new files | (push) |
+| [x] 0.3 | **First push and verify.** Explain `git push`; after user approval, push; check GitHub shows the new structure | GitHub repo shows only the new files | (push) |
 
 ## Module 1: Backend Foundation
 | ID | Task | Done when | Commit |
 |----|------|-----------|--------|
-| [ ] 1.1 | Server setup: `npm init`, install Express, dotenv, cors, helmet, morgan; `app.js` + `server.js` | Server starts on the chosen port | `add express server setup` |
+| [x] 1.1 | Server setup: `npm init`, install Express, dotenv, cors, helmet, morgan; `app.js` + `server.js` | Server starts on the chosen port | `add express server setup` |
 | [ ] 1.2 | MongoDB Atlas cluster + Mongoose connection in `config/db.js` | Console shows a successful DB connection | `add mongodb connection` |
 | [ ] 1.3 | Middleware: central error handler, rate limiter, Zod `validate` helper, not-found handler | Bad input returns clean JSON errors | `add error handling and validation middleware` |
 | [ ] 1.4 | `GET /api/health` route; test with a REST client | Returns `{ "status": "ok" }` | `add health check route` |
