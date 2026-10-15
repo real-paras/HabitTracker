@@ -6,6 +6,8 @@ import { apiLimiter } from './middleware/rateLimit';
 import { notFound } from './middleware/notFound';
 import { errorHandler } from './middleware/errorHandler';
 
+import healthRouter from './routes/health';
+
 /**
  * Express Application Configuration
  *
@@ -37,7 +39,10 @@ if (process.env.NODE_ENV !== 'test') {
 // 5. Rate Limiting for all API routes
 app.use('/api', apiLimiter);
 
-// 6. Root check endpoint
+// 6. Base API routes
+app.use('/api', healthRouter);
+
+// 7. Root check endpoint
 app.get('/', (_req: Request, res: Response) => {
   res.json({
     message: 'HabitTracker API is active',

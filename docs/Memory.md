@@ -3,9 +3,9 @@
 > The agent's living memory for this project. **Read this first every session. Update it at the end of every task.** Keep it short, factual, and current. Never put secrets or `.env` values here.
 
 ## 1. Current Status
-- **Last completed task:** Task 1.3
-- **Currently working on:** Module 1, Task 1.4
-- **Next task:** 1.4 `GET /api/health` route
+- **Last completed task:** Task 1.4 (Module 1: Backend Foundation Complete)
+- **Currently working on:** Module 2, Task 2.1
+- **Next task:** 2.1 `User` model
 - **Blockers:** none
 - **Last updated:** 2026-10-16
 
@@ -68,6 +68,7 @@ git push
 | 2026-10-16 | 1.1 | Express + TypeScript server setup with helmet, cors, morgan, dotenv | `add express server setup` |
 | 2026-10-16 | 1.2 | MongoDB Atlas & Mongoose setup in server/src/config/db.ts | `add mongodb connection` |
 | 2026-10-16 | 1.3 | Central error handling, rate limiting, Zod validation, and 404 middleware | `add error handling and validation middleware` |
+| 2026-10-16 | 1.4 | Health check route GET /api/health and REST verification | `add health check route` |
 
 ## 9. Problems and Fixes
 Record errors that took effort to solve, so they are never repeated.
