@@ -53,7 +53,7 @@ flowchart TD
 | ID | Task | Done when | Commit |
 |----|------|-----------|--------|
 | [x] 1.1 | Server setup: `npm init`, install Express, dotenv, cors, helmet, morgan; `app.js` + `server.js` | Server starts on the chosen port | `add express server setup` |
-| [ ] 1.2 | MongoDB Atlas cluster + Mongoose connection in `config/db.js` | Console shows a successful DB connection | `add mongodb connection` |
+| [x] 1.2 | MongoDB Atlas cluster + Mongoose connection in `config/db.js` | Console shows a successful DB connection | `add mongodb connection` |
 | [ ] 1.3 | Middleware: central error handler, rate limiter, Zod `validate` helper, not-found handler | Bad input returns clean JSON errors | `add error handling and validation middleware` |
 | [ ] 1.4 | `GET /api/health` route; test with a REST client | Returns `{ "status": "ok" }` | `add health check route` |
 
