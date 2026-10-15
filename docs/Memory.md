@@ -3,9 +3,9 @@
 > The agent's living memory for this project. **Read this first every session. Update it at the end of every task.** Keep it short, factual, and current. Never put secrets or `.env` values here.
 
 ## 1. Current Status
-- **Last completed task:** Task 1.2
-- **Currently working on:** Module 1, Task 1.3
-- **Next task:** 1.3 Middleware: central error handler, rate limiter, Zod validate helper, not-found handler
+- **Last completed task:** Task 1.3
+- **Currently working on:** Module 1, Task 1.4
+- **Next task:** 1.4 `GET /api/health` route
 - **Blockers:** none
 - **Last updated:** 2026-10-16
 
@@ -67,12 +67,14 @@ git push
 | 2026-10-16 | 0.3 | First push to GitHub origin/main and verified clean repo | (push) |
 | 2026-10-16 | 1.1 | Express + TypeScript server setup with helmet, cors, morgan, dotenv | `add express server setup` |
 | 2026-10-16 | 1.2 | MongoDB Atlas & Mongoose setup in server/src/config/db.ts | `add mongodb connection` |
+| 2026-10-16 | 1.3 | Central error handling, rate limiting, Zod validation, and 404 middleware | `add error handling and validation middleware` |
 
 ## 9. Problems and Fixes
 Record errors that took effort to solve, so they are never repeated.
 | Date | Problem | Cause | Fix |
 |------|---------|-------|-----|
 | 2026-10-16 | TS5108: Option 'moduleResolution=node10' has been removed | Legacy 'node' alias deprecated in newest TypeScript | Configured `"module": "NodeNext"` and `"moduleResolution": "NodeNext"` in `tsconfig.json` |
+| 2026-10-16 | TS2322: Type 'unknown' not assignable to ParsedQs/ParamsDictionary | Zod `parseAsync` return type vs Express Request query/params type | Coerced parsed results using Express `Request['query']` and `Request['params']` |
 
 ## 10. Open Questions
 - Language: Resolved (TypeScript chosen for client and server)
